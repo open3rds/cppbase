@@ -1,8 +1,9 @@
+
 add_repositories("open3rds https://github.com/open3rds/xmake-repo main")
--- add_repositories("open3rds git@github.com:open3rds/xmake-repo.git experiment")
-add_requires("open3rds::cppbase  1.0.x", {alias = "cppbase"})
+-- add_repositories("open3rds https://github.com/open3rds/xmake-repo experiment")
+add_requires("cppbase 0.0.2", {alias = "cppbase"})
 
 target("app")
     set_kind("binary")
-    add_files("app.cpp")
     add_packages("cppbase")
+    add_files("app.cpp")

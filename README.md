@@ -39,6 +39,8 @@ A simple example of use this repo as a internal referenced library.
 
 It should be able to be built when its entirely copied out from the root direcotry, a.k.a. independantly.
 
+If use xmake to build example in place, use `xmake -P .`  instead of `xmake`.
+
 ## include/
 
 Header files, name of cpp srcs ends with `.hpp` while c srcs ends with `.h`.

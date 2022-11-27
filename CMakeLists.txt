@@ -1,6 +1,8 @@
+#### declare a new project root
 cmake_minimum_required(VERSION 3.16)
 include(FetchContent)
-#### CPP related
+
+#### CPP related, must set before project definition
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_COMPILER /usr/bin/gcc-11)
 set(CMAKE_CXX_COMPILER /usr/bin/g++-11)
@@ -54,12 +56,9 @@ add_subdirectory(test)
 
 file(GLOB_RECURSE CPP_SRC_LIST ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
-add_library(cppbase SHARED "")
-target_sources(
-    cppbase
-    PRIVATE
-           ${CPP_SRC_LIST}
-)
+add_library(cppbase SHARED ${CPP_SRC_LIST})
+add_library(cppbase STATIC ${CPP_SRC_LIST})
+
 target_include_directories(
     cppbase
     PUBLIC
