@@ -3,7 +3,7 @@
 This is a repository for demonstration of c++ development.
 
 
-# Usage of base repo 
+## Usage of base repo 
 [remove this section in new projects]
 ```shell
 git clone https://github.com/open3rds/cppbase.git
@@ -15,11 +15,11 @@ git add .
 git commit -m "Init project template"
 ```
 
-# Usage
+## Usage
 
 How to reference this library, see: https://github.com/open3rds or [example/](example/).
 
-## Add
+### Add
 
 ```cpp
 template<typename ...Args>
@@ -31,9 +31,9 @@ Add variable length of arguments together, use plus sign internal.
 auto result = open3rds::add(1, 2, 1.125);
 ```
 
-# Project Structure
+## Project Structure
 
-## example/
+### example/
 
 A simple example of use this repo as a internal referenced library.
 
@@ -41,14 +41,14 @@ It should be able to be built when its entirely copied out from the root direcot
 
 If use xmake to build example in place, use `xmake -P .`  instead of `xmake`.
 
-## include/
+### include/
 
 Header files, name of cpp srcs ends with `.hpp` while c srcs ends with `.h`.
 
-## src/
+### src/
 
 Source files, name of files ends with either `.cpp` or `.c` (sometime with `.py` etc.).
 
-## test/
+### test/
 
 Unittests, use gtest by default.
