@@ -7,7 +7,7 @@ target("cppbase")
     set_kind("shared")
     set_languages("c++20")
     add_files("src/*.cpp")
-    add_headerfiles("include/cppbase/*.hpp")
+    add_headerfiles("include/(cppbase/*.hpp)")
     add_includedirs("include")
 
 target("test")
