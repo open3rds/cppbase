@@ -1,3 +1,13 @@
+# Building tools
+.xmake
+build
+cmake-build-debug
+cmake-build-release
+
+# IDE/editor configure files
+.vscode
+.idea
+
 # Prerequisites
 *.d
 
