@@ -11,7 +11,7 @@ TEST(AddTest, AddInteger)
     EXPECT_EQ(open3rds::add(1, 2, 3, 1.125), 7.125);
 }
 
-TEST(AddTest, AddFailDemo)
+TEST(AddTest, DISABLED_AddFailDemo)
 {
     EXPECT_EQ(open3rds::add(1, 1), 3);
 }

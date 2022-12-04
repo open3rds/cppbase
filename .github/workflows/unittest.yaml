@@ -1,0 +1,33 @@
+name: unittest
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: essential-cmake
+        run: |
+          cd ${{github.workspace}}
+          echo "github workspace dir is " ${{github.workspace}}
+          bash env_setup.sh
+          mkdir build && cd build && cmake ..
+          make all test
+      - name: essential-xmake
+        run: |
+          cd ${{github.workspace}}
+          echo "github workspace dir is " ${{github.workspace}}
+          bash env_setup.sh
+          xmake build
+          xmake run test
+
+          

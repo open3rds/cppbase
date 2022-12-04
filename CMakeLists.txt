@@ -57,7 +57,7 @@ add_subdirectory(test)
 file(GLOB_RECURSE CPP_SRC_LIST ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 add_library(cppbase SHARED ${CPP_SRC_LIST})
-add_library(cppbase STATIC ${CPP_SRC_LIST})
+add_library(cppbase_static STATIC ${CPP_SRC_LIST})
 
 target_include_directories(
     cppbase
