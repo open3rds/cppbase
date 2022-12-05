@@ -21,7 +21,7 @@ jobs:
         run: |
           cd ${{github.workspace}}
           echo "github workspace dir is " ${{github.workspace}}
-          mkdir build && cd build && cmake ..
+          mkdir cmake-build && cd cmake-build && cmake ..
           make all test
       - name: essential-xmake
         run: |
