@@ -6,4 +6,5 @@ sudo apt install -y g++-11
 g++-11 --version
 
 bash <(curl -fsSL https://xmake.io/shget.text)
-xmake f --toolchain=gcc-11 -c
+source ~/.xmake/profile
+xmake -y f --toolchain=gcc-11 -c
