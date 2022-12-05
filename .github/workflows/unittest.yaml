@@ -15,18 +15,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: env-setup
+        run:  bash env_setup.sh
       - name: essential-cmake
         run: |
           cd ${{github.workspace}}
           echo "github workspace dir is " ${{github.workspace}}
-          bash env_setup.sh
           mkdir build && cd build && cmake ..
           make all test
       - name: essential-xmake
         run: |
           cd ${{github.workspace}}
           echo "github workspace dir is " ${{github.workspace}}
-          bash env_setup.sh
           xmake build
           xmake run test
 
