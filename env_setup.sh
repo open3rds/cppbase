@@ -7,4 +7,4 @@ g++-11 --version
 
 bash <(curl -fsSL https://xmake.io/shget.text)
 source ~/.xmake/profile
-xmake -y f --toolchain=gcc-11 -c
+xmake f --toolchain=gcc-11 -c -y
