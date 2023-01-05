@@ -6,9 +6,14 @@ TEST(AddTest, AddInteger)
     EXPECT_EQ(open3rds::add(1, 2), 3);
     EXPECT_EQ(open3rds::add(1, 2, 3), 6);
     EXPECT_EQ(open3rds::add(1, 2, 3, 4), 10);
-    EXPECT_EQ(open3rds::add(1, 2.125), 3.125 );
-    EXPECT_EQ(open3rds::add(1, 2, 1.125) ,4.125);
+    EXPECT_EQ(open3rds::add(1, 2.125), 3.125);
+    EXPECT_EQ(open3rds::add(1, 2, 1.125), 4.125);
     EXPECT_EQ(open3rds::add(1, 2, 3, 1.125), 7.125);
+}
+
+TEST(AddTest, AddDouble)
+{
+    EXPECT_DOUBLE_EQ(open3rds::add(1.5, 1.5), 3.0);
 }
 
 TEST(AddTest, DISABLED_AddFailDemo)
